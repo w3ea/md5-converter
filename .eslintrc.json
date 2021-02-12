@@ -1,0 +1,103 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "airbnb",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "react-hooks",
+        "@typescript-eslint"
+    ],
+    "settings": {
+        "import/resolver": {
+            "node": {
+                "extensions": [
+                    ".js",
+                    ".jsx",
+                    ".ts",
+                    ".tsx"
+                ]
+            }
+        }
+    },
+    "overrides": [
+        {
+            "files": ["**/*.tsx"],
+            "rules": {
+                "react/prop-types": "off"
+            }
+        }
+    ],
+    "rules": {
+        // suppress errors for missing 'import React' in files (NextJs)
+        "react/react-in-jsx-scope": "off",
+        "indent": ["error", 4, { "SwitchCase": 1 }],
+        "react/jsx-indent": ["error", 4],
+        "react/jsx-indent-props": ["error", 4],
+        "react-hooks/rules-of-hooks": "error",
+        // Checks effect dependencies
+        "react-hooks/exhaustive-deps": "warn",
+        "quotes": ["error", "single"],
+        "jsx-quotes": ["error", "prefer-single"],
+        "react/jsx-wrap-multilines": [
+            "error", {
+                // "declaration": "parens-new-line",
+                // "assignment": "parens-new-line",
+                // "return": "parens-new-line",
+                // "arrow": "parens-new-line",
+                // "condition": "parens-new-line",
+                "logical": "ignore",
+                "prop": "ignore"
+            }
+        ],
+        // remove new line in the end of file
+        "eol-last": ["error", "never"],
+        // no trailing commas
+        "comma-dangle": ["error", "never"],
+        //  allow .js and .ts files
+        "react/jsx-filename-extension": [1, {"extensions": [".js", ".jsx", ".ts", ".tsx"]}],
+        "max-len": "off",
+        //  extra space "!..." -> "! ..."
+        "space-unary-ops": [
+            2, {
+                "overrides": {
+                    "!": true
+                }
+            }
+        ],
+        //  allow object with 6 items without breake to new line
+        "object-curly-newline": ["error", {
+            "multiline": true,
+            "minProperties": 8
+        }],
+        "operator-linebreak": ["error", "after", {"overrides": {"&&": "after"}}],
+        "no-use-before-define": ["error", { "functions": false, "variables": false }],
+        //  allow to use "a && b" or "a || b"
+        "no-unused-expressions": "off",
+        "arrow-parens": ["error", "as-needed"],
+        "import/extensions": ["error", "ignorePackages", {
+            "js": "never",
+            "jsx": "never",
+            "ts": "never",
+            "tsx": "never",
+            "mjs": "never"
+        }]
+    }
+}
