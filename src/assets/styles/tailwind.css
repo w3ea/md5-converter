@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 400;
+        src: local('Nunito Regular'), local('Nunito-Regular'),
+        url('../fonts/nunito-v13-latin-regular.woff2') format('woff2'),
+        url('../fonts/nunito-v13-latin-regular.woff') format('woff');
+        font-display: block;
+    }
+
+    body {
+        font-family: Nunito, sans-serif, Arial;
+        background-color: #f5f6f8;
+        color: #1a202c;
+    }
+}
