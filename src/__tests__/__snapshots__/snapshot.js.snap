@@ -1,0 +1,137 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders homepage unchanged 1`] = `
+<section
+  className="pt-8 pb-20 flex flex-col space-y-20"
+>
+  <form
+    className="tw-form"
+    onSubmit={[Function]}
+  >
+    <h1
+      className="mb-5 text-6 font-bold text-gray-800 text-center"
+    >
+      MD5 Converter
+    </h1>
+    <div
+      className="relative flex-grow"
+    >
+      <label
+        className="text-3.75 text-gray-500 ml-1.5 leading-7"
+        htmlFor="text"
+      >
+        Text
+      </label>
+      <textarea
+        className="tw-form__text-field"
+        id="text"
+        name="text"
+        onKeyPress={[Function]}
+      />
+      <div
+        className="tooltip"
+      >
+        <svg
+          className="w-5 text-gray-400"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+          />
+        </svg>
+        <p
+          className="tooltip__text"
+        >
+          use Shift + Enter for new line
+        </p>
+      </div>
+    </div>
+    <div
+      className="mt-3 flex md:justify-end"
+    >
+      <button
+        className="tw-form__submit-button"
+        type="submit"
+      >
+        <svg
+          className="w-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+          />
+          <path
+            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+          />
+        </svg>
+        <span
+          className="text-4.25"
+        >
+          Generate
+        </span>
+      </button>
+    </div>
+  </form>
+  <div
+    className="tw-table"
+  >
+    <table
+      className="table"
+    >
+      <thead
+        className="lg:bg-gray-800 lg:border-b lg:border-blue-100"
+      >
+        <tr
+          className="hidden lg:flex w-full"
+        >
+          <th
+            className="column__text"
+          >
+            Text
+          </th>
+          <th
+            className="column__md5"
+          >
+            MD5
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td
+            className="column column__text"
+            data-label="Text"
+          >
+            <span>
+              Welcome to MyMd5Converter. Use the form above to get started
+            </span>
+          </td>
+          <td
+            className="column column__md5"
+            data-label="MD5"
+          >
+            <span>
+              5a1c94d0b5eb2d18ef2ebce8adaab77b
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+`;
