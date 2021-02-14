@@ -1,0 +1,16 @@
+.column {
+    width: 100%;
+
+    @media (min-width: 1024px) {
+        &__text {
+            width: 58.333333%; // 7/12
+        }
+        &__md5 {
+            width: 41.666667%; // 5/12
+        }
+        &__number, &__action {
+            width: 3.5rem;
+            flex: none;
+        }
+    }
+}
