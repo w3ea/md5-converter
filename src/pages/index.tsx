@@ -5,7 +5,7 @@ import TableListSlice from '../store/tableListSlice';
 import Form from '../components/Form';
 import Table from '../components/Table';
 
-const store = configureStore({ reducer: { tableList: TableListSlice } });
+export const store = configureStore({ reducer: { tableList: TableListSlice } });
 
 const Home: FC = () => (
     <Provider store={store}>

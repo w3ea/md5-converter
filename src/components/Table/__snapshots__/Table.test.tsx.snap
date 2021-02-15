@@ -1,0 +1,191 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Table /> renders table list 1`] = `
+<DocumentFragment>
+  <div
+    class="tw-table"
+  >
+    <table
+      class="table"
+    >
+      <thead
+        class="lg:bg-gray-800 lg:border-b lg:border-blue-100"
+      >
+        <tr
+          class="hidden lg:flex w-full"
+        >
+          <th
+            class="column__number"
+          >
+            #
+          </th>
+          <th
+            class="column__text"
+          >
+            Text
+          </th>
+          <th
+            class="column__md5"
+          >
+            MD5
+          </th>
+          <th
+            class="column__action"
+          >
+            <button
+              class="tw-table__head__remove-all-button"
+              title="Remove all"
+              type="button"
+            >
+              <svg
+                class="w-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </button>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          style="opacity: 1; transform: none;"
+        >
+          <td
+            class="column column__number"
+            data-label="#"
+          >
+            <span>
+              1
+            </span>
+          </td>
+          <td
+            class="column column__text"
+            data-label="Text"
+            data-testid="text"
+          >
+            <span>
+              foo
+            </span>
+          </td>
+          <td
+            class="column column__md5"
+            data-label="MD5"
+          >
+            <span>
+              acbd18db4cc2f85cedef654fccc4a4d8
+            </span>
+          </td>
+          <td
+            class="column column__action"
+            data-label="Action"
+          >
+            <div
+              class="p-2 lg:py-3.5 lg:px-4 mx-auto"
+            >
+              <button
+                class="tw-table__row__remove-item"
+                data-testid="remove-item-button"
+                title="Remove item"
+                type="button"
+              >
+                <svg
+                  class="w-5.5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+                <p
+                  class="text-3.75 font-bold lg:hidden"
+                >
+                  Delete
+                </p>
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr
+          style="opacity: 1; transform: none;"
+        >
+          <td
+            class="column column__number"
+            data-label="#"
+          >
+            <span>
+              2
+            </span>
+          </td>
+          <td
+            class="column column__text"
+            data-label="Text"
+            data-testid="text"
+          >
+            <span>
+              bar
+            </span>
+          </td>
+          <td
+            class="column column__md5"
+            data-label="MD5"
+          >
+            <span>
+              37b51d194a7513e45b56f6524f2d51f2
+            </span>
+          </td>
+          <td
+            class="column column__action"
+            data-label="Action"
+          >
+            <div
+              class="p-2 lg:py-3.5 lg:px-4 mx-auto"
+            >
+              <button
+                class="tw-table__row__remove-item"
+                data-testid="remove-item-button"
+                title="Remove item"
+                type="button"
+              >
+                <svg
+                  class="w-5.5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+                <p
+                  class="text-3.75 font-bold lg:hidden"
+                >
+                  Delete
+                </p>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</DocumentFragment>
+`;

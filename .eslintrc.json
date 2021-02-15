@@ -42,6 +42,9 @@
             "files": ["**/*.tsx"],
             "rules": {
                 "react/prop-types": "off"
+            },
+            "env": {
+                "jest": true
             }
         }
     ],
@@ -100,6 +103,7 @@
             "ts": "never",
             "tsx": "never",
             "mjs": "never"
-        }]
+        }],
+        "import/no-extraneous-dependencies": ["error", {"devDependencies": ["**/*.test.ts", "**/*.test.tsx"]}]
     }
 }
