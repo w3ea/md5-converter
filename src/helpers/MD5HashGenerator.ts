@@ -1,5 +1,6 @@
 import { TableItem } from '../types/tableItem';
-import fetchMD5 from '../API/fetchMD5';
+import { fetchByRest7 } from '../API/fetchMD5';
+// import { fetchByHashify } from '../API/fetchMD5';
 
 type GeneratorType = {
     error?: boolean,
@@ -12,7 +13,8 @@ const MD5HashGenerator = async (tableList: TableItem[], text: string): Promise<G
         return { MD5Hash: itemAlreadyExist.MD5Hash };
     }
 
-    const data = await fetchMD5(text);
+    const data = await fetchByRest7(text);
+    // const data = await fetchByHashify(text);
 
     if (! data.success) {
         return { error: true };
