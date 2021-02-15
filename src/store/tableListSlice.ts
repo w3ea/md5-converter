@@ -1,32 +1,22 @@
 import { createSlice } from '@reduxjs/toolkit';
+// region Reducers
+import setTableListReducer from './reducers/setTableListReducer';
+import removeAllItemReducer from './reducers/removeAllItemReducer';
+import addNewItemReducer from './reducers/addNewItemReducer';
+import removeItemReducer from './reducers/removeItemReducer';
+// endregion
 import { TableItem } from '../types/tableItem';
-import createNewItem from '../helpers/createNewItem';
 
-const initialState: TableItem[] = [];
+export const initialState: TableItem[] = [];
 
 const tableListSlice = createSlice({
     name: 'tableList',
     initialState,
     reducers: {
-        setTableList: (state, { payload }) => {
-            state = payload;
-            return state;
-        },
-        removeAllItem: state => {
-            state = initialState;
-            return state;
-        },
-        addNewItem: (state, { payload }) => {
-            const newItem = createNewItem(payload.originalText, payload.MD5Hash);
-
-            state = [newItem, ...state];
-            return state;
-        },
-        removeItem: (state, { payload }) => {
-            state = state.filter(item => item.id !== payload);
-
-            return state;
-        }
+        setTableList: setTableListReducer,
+        removeAllItem: removeAllItemReducer,
+        addNewItem: addNewItemReducer,
+        removeItem: removeItemReducer
     }
 });
 
