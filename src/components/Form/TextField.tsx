@@ -21,7 +21,7 @@ const TextField: FC<Props> = ({ register, errors, onSubmit }) => {
 
     return (
         <div className='relative flex-grow'>
-            <label htmlFor='text' className='text-3.75 text-gray-500 ml-1.5 leading-7'>
+            <label htmlFor='text' className='text-3.75 text-gray-600 ml-1.5 leading-7'>
                 Text
             </label>
             <textarea

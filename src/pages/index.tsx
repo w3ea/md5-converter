@@ -9,11 +9,11 @@ export const store = configureStore({ reducer: { tableList: TableListSlice } });
 
 const Home: FC = () => (
     <Provider store={store}>
-        <section className='pt-8 pb-20 flex flex-col space-y-20'>
+        <div className='pt-8 pb-20 flex flex-col space-y-20'>
             <Form />
 
             <Table />
-        </section>
+        </div>
     </Provider>
 );
 

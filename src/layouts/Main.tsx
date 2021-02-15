@@ -3,7 +3,7 @@ import Header from './Header';
 import Footer from './Footer';
 
 const Main: FC = ({ children }) => (
-    <section className='flex flex-col min-h-screen'>
+    <div className='flex flex-col min-h-screen'>
         <Header />
 
         <main className='mt-8 container flex-1'>
@@ -11,7 +11,7 @@ const Main: FC = ({ children }) => (
         </main>
 
         <Footer />
-    </section>
+    </div>
 );
 
 export default Main;

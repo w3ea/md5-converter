@@ -2,6 +2,7 @@ import { FC } from 'react';
 
 const Header: FC = () => (
     <header className='border-b border-blue-700 border-opacity-10'>
+        <span className='sr-only'>header</span>
         <div className='container py-3 md:py-3.5'>
             {/* Logo */}
             <svg className='w-8' fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>

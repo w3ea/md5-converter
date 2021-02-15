@@ -13,7 +13,7 @@ const Table: FC = () => {
 
     return (
         <div className='tw-table'>
-            <table className={style.table}>
+            <table className={style.table} summary='The table list of converted text contains the row number, text, md5, and action (delete item) columns'>
                 <TableHead existUserList={existUserList} />
                 <tbody>
 
