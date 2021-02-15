@@ -1,30 +1,46 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+I created a demo website to make it faster to use it: [https://fuv5zkfwkd.vercel.app](https://fuv5zkfwkd.vercel.app)
+
+> I hashed the domain to keep it private
 
 ## Getting Started
 
-First, run the development server:
+After installed NPM packages, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+```bash  
+npm run dev  
+# or  
+yarn dev  
+```  
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-## Learn More
+## Need To Know
 
-To learn more about Next.js, take a look at the following resources:
+The API server that exist in public folder (http://api.rest7.com/v1/text_hash.php) isn't reliable, and it does not support the HTTPS protocol either. So I added another API service to cover these issues.
+If you want to upload this project on an HTTPS server or get stuck by API during testing, please follow these steps:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Open `src/helpers/MD5HashGenerator.ts`
+2. Remove or comment line 2 and 16
+3. Uncomment line 3 and 17
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Road Map
 
-## Deploy on Vercel
+### Phase 1
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- [x] Use Next.js to get advantage of static site at the beginning and other features at the future
+- [x] Use framer-motion for more user interaction with the app
+- [x] Save user convert list at the local storage
+- [x] Use static code analyzer tools (TypeScript and ESlint)
+- [x] Create responsive UI with modular components
+- [x] Optimize accessibility, and cross-browser compatibility
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Phase 2
+
+- [ ] Create confirm dialog on delete item
+- [ ] Use react virtualized for efficiently rendering large list
+- [ ] Add PWA with custom service worker to handle offline fallback
+- [ ] Test coverage 100% and use cypress (end-to-end test)
+- [ ] Detecting Online Status
+- [ ] Optimize SEO by adding (openGraph, canonical, description,...)
+- [ ] Change home page UI for ultra screen size
