@@ -7,7 +7,7 @@ type Props = {
 
 const SubmitButton: FC<Props> = ({ loading }) => (
     <div className='mt-3 flex md:justify-end'>
-        <button type='submit' className='tw-form__submit-button'>
+        <button data-testid='submit-button' type='submit' className='tw-form__submit-button'>
             {/* Gear Icon */}
             <svg
                 className={cls('w-6', { 'animate-spin': loading })}
@@ -20,7 +20,7 @@ const SubmitButton: FC<Props> = ({ loading }) => (
                 <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M15 12a3 3 0 11-6 0 3 3 0 016 0z' />
             </svg>
             <span className='text-4.25'>
-                Generate
+                Convert
             </span>
         </button>
     </div>

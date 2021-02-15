@@ -25,11 +25,13 @@ const TextField: FC<Props> = ({ register, errors, onSubmit }) => {
                 Text
             </label>
             <textarea
+                data-testid='text'
                 ref={register}
                 id='text'
                 name='text'
                 className={cls('tw-form__text-field', { 'tw-form__text-field--error': errors?.text })}
                 onKeyPress={handleUserKeyPress}
+                required
             />
             <AnimatePresence>
                 {errors?.text && <ErrorMessage message={errors.text.message} />}

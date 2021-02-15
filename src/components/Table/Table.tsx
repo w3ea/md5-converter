@@ -1,31 +1,15 @@
-import { FC, useEffect, useRef } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { FC } from 'react';
+import { useSelector } from 'react-redux';
 import { AnimatePresence } from 'framer-motion';
-import { tableListSelector, setTableList } from '../../store/tableListSlice';
-import { getFromLocal, saveToLocal } from '../../helpers/localStorage';
+import { tableListSelector } from '../../store/tableListSlice';
 import TableHead from './TableHead';
 import DefaultRow from './DefaultRow';
 import Row from './Row';
 import style from '../../assets/styles/components/table/table.module.scss';
 
 const Table: FC = () => {
-    const dispatch = useDispatch();
     const tableList = useSelector(tableListSelector);
-    const didMount = useRef(false);
     const existUserList = tableList.length > 0;
-
-    // region get and save tableList to localStorage
-    useEffect(() => {
-        dispatch(setTableList(getFromLocal()));
-    }, [dispatch]);
-    useEffect(() => {
-        if (didMount.current) {
-            saveToLocal(tableList);
-        } else {
-            didMount.current = true;
-        }
-    }, [tableList]);
-    // endregion
 
     return (
         <div className='tw-table'>

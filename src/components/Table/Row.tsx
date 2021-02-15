@@ -34,7 +34,7 @@ const Row: FC<Props> = ({ rowNumber, item }) => {
                     {rowNumber}
                 </span>
             </td>
-            <td className={cls(style.column, style.column__text)} data-label='Text'>
+            <td className={cls(style.column, style.column__text)} data-label='Text' data-testid='text'>
                 <span>
                     {item.originalText}
                 </span>
@@ -47,6 +47,7 @@ const Row: FC<Props> = ({ rowNumber, item }) => {
             <td className={cls(style.column, style.column__action)} data-label='Action'>
                 <div className='p-2 lg:py-3.5 lg:px-4 mx-auto'>
                     <button
+                        data-testid='remove-item-button'
                         className='tw-table__row__remove-item'
                         type='button'
                         onClick={onRemove}

@@ -1,12 +1,13 @@
-import { FC, useState } from 'react';
+import { FC, useEffect, useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-import { addNewItem, tableListSelector } from '../../store/tableListSlice';
+import { addNewItem, tableListSelector, setTableList } from '../../store/tableListSlice';
 import MD5HashGenerator from '../../helpers/MD5HashGenerator';
 import TextField from './TextField';
 import SubmitButton from './SubmitButton';
+import { getFromLocal, saveToLocal } from '../../helpers/localStorage';
 
 type Input = {
     text: string
@@ -18,6 +19,7 @@ const Form: FC = () => {
     const [loading, setLoading] = useState(false);
     const dispatch = useDispatch();
     const tableList = useSelector(tableListSelector);
+    const didMount = useRef(false);
     const { register, handleSubmit, errors, reset } = useForm<Input>({
         mode: 'onTouched',
         resolver: yupResolver(schema)
@@ -35,13 +37,26 @@ const Form: FC = () => {
         }
 
         reset();
-        dispatch(addNewItem({ originalText: text, MD5Hash }));
+        dispatch(addNewItem({ originalText: text, MD5Hash: MD5Hash || '' }));
         setLoading(false);
         return false;
     });
 
+    // region get and save tableList to localStorage
+    useEffect(() => {
+        dispatch(setTableList(getFromLocal()));
+    }, [dispatch]);
+    useEffect(() => {
+        if (didMount.current) {
+            saveToLocal(tableList);
+        } else {
+            didMount.current = true;
+        }
+    }, [tableList]);
+    // endregion
+
     return (
-        <form className='tw-form' onSubmit={onSubmit}>
+        <form data-testid='convert-form' className='tw-form' onSubmit={onSubmit}>
             <h1 className='mb-5 text-6 font-bold text-gray-800 text-center'>
                 MD5 Converter
             </h1>
