@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, memo } from 'react';
 import { useDispatch } from 'react-redux';
 import { removeAllItem } from '../../store/tableListSlice';
 import style from '../../assets/styles/components/table/column.module.scss';
@@ -7,7 +7,7 @@ type Props = {
     existUserList: boolean
 };
 
-const TableHead: FC<Props> = ({ existUserList }) => {
+const TableHead: FC<Props> = memo(({ existUserList }) => {
     const dispatch = useDispatch();
 
     const onRemoveAll = () => {
@@ -49,6 +49,6 @@ const TableHead: FC<Props> = ({ existUserList }) => {
             </tr>
         </thead>
     );
-};
+});
 
 export default TableHead;

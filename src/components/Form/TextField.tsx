@@ -1,4 +1,4 @@
-import { FC, KeyboardEvent } from 'react';
+import { FC, KeyboardEvent, memo } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import { UseFormMethods } from 'react-hook-form';
 import cls from 'clsx';
@@ -9,7 +9,7 @@ type Props = Partial<Pick<UseFormMethods, 'register' | 'errors'>> & {
     onSubmit: () => Promise<void>
 };
 
-const TextField: FC<Props> = ({ register, errors, onSubmit }) => {
+const TextField: FC<Props> = memo(({ register, errors, onSubmit }) => {
     const handleUserKeyPress = (event: KeyboardEvent<HTMLTextAreaElement>) => {
         if (! event.shiftKey && event.key === 'Enter') {
             event.preventDefault();
@@ -39,6 +39,6 @@ const TextField: FC<Props> = ({ register, errors, onSubmit }) => {
             <Tooltip />
         </div>
     );
-};
+});
 
 export default TextField;

@@ -1,11 +1,11 @@
-import { FC } from 'react';
+import { FC, memo } from 'react';
 import cls from 'clsx';
 
 type Props = {
     loading: boolean
 };
 
-const SubmitButton: FC<Props> = ({ loading }) => (
+const SubmitButton: FC<Props> = memo(({ loading }) => (
     <div className='mt-3 flex md:justify-end'>
         <button data-testid='submit-button' type='submit' className='tw-form__submit-button'>
             {/* Gear Icon */}
@@ -24,6 +24,6 @@ const SubmitButton: FC<Props> = ({ loading }) => (
             </span>
         </button>
     </div>
-);
+));
 
 export default SubmitButton;
