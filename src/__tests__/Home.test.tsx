@@ -8,7 +8,7 @@ describe('<Index />', () => {
         expect(getByText('MD5 Converter')).toBeInTheDocument();
         expect(getByText('MD5')).toBeInTheDocument();
         expect(getByText('Welcome to MyMd5Converter. Use the form above to get started')).toBeInTheDocument();
-        expect(getByText('5a1c94d0b5eb2d18ef2ebce8adaab77b')).toBeInTheDocument();
+        expect(getByText('f5c4a3b160d818bdb8e0190b9041ba44')).toBeInTheDocument();
     });
 
     it('should match home page snapshot', () => {
