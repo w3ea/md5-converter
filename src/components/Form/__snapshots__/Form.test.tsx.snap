@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Table /> should match form snapshot 1`] = `
+exports[`<Form /> should match form snapshot 1`] = `
 <DocumentFragment>
   <form
     class="tw-form"
     data-testid="convert-form"
   >
     <h1
-      class="mb-5 text-6 font-bold text-gray-800 text-center"
+      class="mb-4 md:mb-5 text-5.5 md:text-6 font-bold text-gray-800 text-center"
     >
       MD5 Converter
     </h1>
@@ -15,7 +15,7 @@ exports[`<Table /> should match form snapshot 1`] = `
       class="relative flex-grow"
     >
       <label
-        class="text-3.75 text-gray-500 ml-1.5 leading-7"
+        class="text-3.75 text-gray-600 ml-1.5 leading-7"
         for="text"
       >
         Text
@@ -25,7 +25,6 @@ exports[`<Table /> should match form snapshot 1`] = `
         data-testid="text"
         id="text"
         name="text"
-        required=""
       />
       <div
         class="tooltip"

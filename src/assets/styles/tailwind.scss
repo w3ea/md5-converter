@@ -23,7 +23,7 @@
 @layer components {
     .tw-form {
         @apply w-full lg:w-4/5 xl:w-2/3 2xl:w-3/5 mx-auto;
-        @apply p-8 md:pt-8 md:pb-10 md:px-16;
+        @apply p-6 pt-5 md:pt-7 md:pb-8 md:px-12 lg:pt-8 lg:pb-10 lg:px-16;
         @apply rounded-lg border-dashed border-2 border-gray-300;
 
         &__text-field {
@@ -39,7 +39,7 @@
         }
 
         &__submit-button {
-            @apply flex-1 md:flex-none flex justify-center items-center space-x-1 py-2.25 px-5;
+            @apply flex-1 md:flex-none flex justify-center items-center space-x-1.25 py-2.25 px-5;
             @apply bg-indigo-600 text-white rounded border-0;
             @apply transition-colors duration-300 lg:hover:bg-indigo-500;
             @apply focus:outline-none focus:ring focus:ring-indigo-300;
@@ -58,7 +58,7 @@
 
         &__row__remove-item {
             @apply flex items-center space-x-1 py-1.5 px-2 lg:p-0;
-            @apply bg-red-100 bg-opacity-30 text-red-600 lg:bg-transparent lg:text-gray-400;
+            @apply bg-red-100 bg-opacity-20 text-red-600 lg:bg-transparent lg:text-gray-400;
             @apply rounded border border-red-400 lg:border-0;
             @apply transition-colors duration-200 lg:hover:text-gray-500;
             @apply focus:outline-none focus:ring-2 focus:ring-red-300 lg:focus:ring-gray-400 lg:focus:ring-offset-2;

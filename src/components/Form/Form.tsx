@@ -57,7 +57,7 @@ const Form: FC = () => {
 
     return (
         <form data-testid='convert-form' className='tw-form' onSubmit={onSubmit}>
-            <h1 className='mb-5 text-6 font-bold text-gray-800 text-center'>
+            <h1 className='mb-4 md:mb-5 text-5.5 md:text-6 font-bold text-gray-800 text-center'>
                 MD5 Converter
             </h1>
 
