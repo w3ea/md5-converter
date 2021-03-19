@@ -1,6 +1,4 @@
-I created a demo website to make it faster to use it: [https://fuv5zkfwkd.vercel.app](https://fuv5zkfwkd.vercel.app)
-
-> I hashed the domain to keep it private
+I created a demo website to make it faster to use it: [https://md5-converter.vercel.app/](https://md5-converter.vercel.app/)
 
 ## Getting Started
 
@@ -15,18 +13,9 @@ yarn dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 
-## Need To Know
-
-The API server that exist in public folder (http://api.rest7.com/v1/text_hash.php) isn't reliable, and it does not support the HTTPS protocol either. So I added another API service to cover these issues.
-If you want to upload this project on an HTTPS server or get stuck by API during testing, please follow these steps:
-
-1. Open `src/helpers/MD5HashGenerator.ts`
-2. Remove or comment line 2 and 16
-3. Uncomment line 3 and 17
-
 ## Road Map
 
-### Phase 1
+### Stage 1
 
 - [x] Use Next.js to get advantage of static site at the beginning and other features at the future
 - [x] Use framer-motion for more user interaction with the app
@@ -35,7 +24,7 @@ If you want to upload this project on an HTTPS server or get stuck by API during
 - [x] Create responsive UI with modular components
 - [x] Optimize accessibility, and cross-browser compatibility
 
-### Phase 2
+### Stage 2
 
 - [ ] Create confirm dialog on delete item
 - [ ] Use react virtualized for efficiently rendering large list
